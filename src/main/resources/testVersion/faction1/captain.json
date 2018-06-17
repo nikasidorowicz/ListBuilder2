@@ -1,0 +1,70 @@
+{
+  "name": "testCaptain1",
+  "points": 50,
+  "unitCount": 1,
+  "figures": [
+    {
+      "name": "testCaptain1",
+      "model": {
+        "name": "testCaptain1",
+        "move": 6,
+        "fightSkill": 4,
+        "shootSkill": 4,
+        "strength": 4,
+        "defence": 6,
+        "attacks": 2,
+        "wounds": 2,
+        "courage": 4,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      "mount": null,
+      "wargears": [
+        {
+          "name": "Sword",
+          "rules": [
+            "Sword counts as single-handed weapon."
+          ]
+        },
+        {
+          "name": "Heavy armour",
+          "rules": [
+            "Heavy armour increases defence by 2."
+          ]
+        }
+      ],
+      "specialRules": [
+        {
+          "name": "testFaction1SpecialRule1",
+          "rules": [
+            "This is a special rule."
+          ],
+          "type": "Passive"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "points": 5,
+      "wargear": {
+        "name": "Shield",
+        "rules": [
+          "Shield increases defence by 2 and allows model to use shielding rule."
+        ]
+      }
+    },
+    {
+      "points": 5,
+      "wargear": {
+        "name": "Short bow",
+        "rules": [
+          "Bow is a shooting weapon."
+        ],
+        "strength": 2,
+        "range": 18
+      }
+    }
+  ]
+}
