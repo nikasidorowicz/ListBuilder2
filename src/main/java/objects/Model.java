@@ -15,5 +15,8 @@ public class Model {
     private int attacks;
     private int wounds;
     private int courage;
+    private int might;
+    private int will;
+    private int fate;
 
 }

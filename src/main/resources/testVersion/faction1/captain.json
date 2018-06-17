@@ -5,6 +5,7 @@
   "figures": [
     {
       "name": "testCaptain1",
+      "race": "Human",
       "model": {
         "name": "testCaptain1",
         "move": 6,
@@ -48,23 +49,20 @@
   "options": [
     {
       "points": 5,
-      "wargear": {
-        "name": "Shield",
-        "rules": [
-          "Shield increases defence by 2 and allows model to use shielding rule."
-        ]
-      }
+      "name": "Shield",
+      "rules": [
+        "Shield increases defence by 2 and allows model to use shielding rule."
+      ]
     },
     {
       "points": 5,
-      "wargear": {
-        "name": "Short bow",
-        "rules": [
-          "Bow is a shooting weapon."
-        ],
-        "strength": 2,
-        "range": 18
-      }
+      "name": "Short bow",
+      "rules": [
+        "Bow is a shooting weapon."
+      ],
+      "strength": 2,
+      "range": 18
     }
-  ]
+  ],
+  "bought": []
 }
