@@ -1,0 +1,40 @@
+[
+  {
+    "id": "sword",
+    "name": "Sword",
+    "rules": [
+      "Sword counts as single-handed weapon."
+    ]
+  },
+  {
+    "id": "heavyarmour",
+    "name": "Heavy armour",
+    "rules": [
+      "Heavy armour increases defence by 2."
+    ]
+  },
+  {
+    "id": "armour",
+    "name": "Armour",
+    "rules": [
+      "Armour increases defence by 1."
+    ]
+  },
+  {
+    "id": "shield",
+    "name": "Shield",
+    "rules": [
+      "Shield increases defence by 1 and allows figure to use shielding rule."
+    ]
+  },
+  {
+    "id": "bow",
+    "name": "bow",
+    "rules": [
+      "Bow is a shooting weapon."
+    ],
+    "strength": 2,
+    "range": 24,
+    "isMissile": true
+  }
+]

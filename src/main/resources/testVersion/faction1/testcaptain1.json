@@ -1,25 +1,25 @@
 {
-  "id": "hero1",
-  "name": "hero1",
-  "points": 100,
+  "id": "testcaptain1",
+  "name": "testCaptain1",
+  "points": 50,
   "figuresCount": 1,
   "figures": [
     {
-      "name": "hero1",
+      "name": "testCaptain1",
       "race": "Human",
       "model": {
-        "name": "hero1",
+        "name": "testCaptain1",
         "move": 6,
-        "fightSkill": 5,
+        "fightSkill": 4,
         "shootSkill": 4,
         "strength": 4,
         "defence": 6,
         "attacks": 2,
         "wounds": 2,
-        "courage": 5,
-        "might": 3,
-        "will": 2,
-        "fate": 2
+        "courage": 4,
+        "might": 2,
+        "will": 1,
+        "fate": 1
       },
       "wargears": [
         "sword",
@@ -32,7 +32,6 @@
   ],
   "options": {
     "shield": 5,
-    "bow": 5,
-    "horse": 10
+    "bow": 5
   }
 }

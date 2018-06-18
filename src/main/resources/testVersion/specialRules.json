@@ -1,0 +1,9 @@
+[
+  {
+    "name": "testFaction1SpecialRule1",
+    "rules": [
+      "This is a special rule."
+    ],
+    "type": "Passive"
+  }
+]

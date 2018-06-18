@@ -13,9 +13,8 @@ public class Figure {
     private String name;
     private String race;
     private Model model;
-    private MountModel mount;
-    private List<Wargear> wargears;
-    private List<SpecialRule> specialRules;
-    private List<MagicPower> magicPowers;
+    private List<String> wargears;
+    private List<String> specialRules;
+    private List<String> magicPowers;
 
 }
