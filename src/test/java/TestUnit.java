@@ -1,11 +1,11 @@
 import objects.Figure;
+import objects.Model;
 import objects.Unit;
 import objects.UnitFactory;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,11 +34,18 @@ public class TestUnit {
         assertTrue(hero.getOptions().containsKey("horse"));
         assertEquals(5, (int) hero.getOptions().get("bow"));
         assertEquals(null, hero.getMount());
-        assertEquals(new ArrayList<>(), hero.getBought());
+        assertEquals(new HashMap<>(), hero.getBought());
 
         List<Figure> figures = hero.getFigures();
         assertEquals(1, figures.size());
-        Figure heroFigure = figures.get(1);
+
+        Figure heroFigure = figures.get(0);
+        assertEquals(2, heroFigure.getWargears().size());
+        assertTrue(heroFigure.getWargears().contains("sword"));
+        assertEquals(null, heroFigure.getMagicPowers());
+
+        Model model = heroFigure.getModel();
+        assertEquals("5/4+", model.getFight());
 
     }
 
