@@ -29,11 +29,8 @@ public class UnitFactory {
         try (JsonReader jsonReader = new JsonReader(new FileReader(file))) {
             Unit unit =  g.fromJson(jsonReader, Unit.class);
             unit.setBought(new HashMap<>());
-            for (Figure figure : unit.getFigures()) {
-                int fightSkill = figure.getModel().getFightSkill();
-                int shootSkill = figure.getModel().getShootSkill();
-                figure.getModel().setFight(String.format("%s/%s+", fightSkill, shootSkill));
-            }
+            for (Figure figure : unit.getFigures())
+                figure.getModel().setFight();
             return unit;
         } catch (IOException e) {
             e.printStackTrace();

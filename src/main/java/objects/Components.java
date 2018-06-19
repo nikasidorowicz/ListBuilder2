@@ -31,11 +31,48 @@ public class Components {
                 .registerTypeAdapterFactory(rta)
                 .create());
 
-        System.out.println(fetchAttributes(gameVersion, "wargear"));
-        System.out.println(fetchAttributes(gameVersion, "specialRules"));
-        // TODO: remember about fight of horses
-        System.out.println(fetchAttributes(gameVersion, "mounts"));
-        System.out.println(fetchAttributes(gameVersion, "magicPowers"));
+        // TODO: refactor using https://stackoverflow.com/questions/8482761/returning-an-extended-class-where-super-class-is-expected
+        // WARGEAR
+        Map<String, Attribute> map = fetchAttributes(gameVersion, "wargear");
+        Wargear wargear;
+        Map<String, Wargear> wargearMap = new HashMap<>();
+        for (Map.Entry<String, Attribute> entry : map.entrySet()) {
+            wargear = (Wargear) entry.getValue();
+            wargearMap.put(entry.getKey(), wargear);
+        }
+        setWargearMap(wargearMap);
+
+        // SPECIAL RULES
+        map = fetchAttributes(gameVersion, "specialRules");
+        SpecialRule specialRule;
+        Map<String, SpecialRule> specialRuleMap = new HashMap<>();
+        for (Map.Entry<String, Attribute> entry : map.entrySet()) {
+            specialRule = (SpecialRule) entry.getValue();
+            specialRuleMap.put(entry.getKey(), specialRule);
+        }
+        setSpecialRuleMap(specialRuleMap);
+
+        // MOUNTS
+        map = fetchAttributes(gameVersion, "mounts");
+        Mount mount;
+        Map<String, Mount> mountMap = new HashMap<>();
+        for (Map.Entry<String, Attribute> entry : map.entrySet()) {
+            mount = (Mount) entry.getValue();
+            mount.getModel().setFight();
+            mountMap.put(entry.getKey(), mount);
+        }
+        setMountMap(mountMap);
+
+        // MAGIC POWERS
+        map = fetchAttributes(gameVersion, "magicPowers");
+        MagicPower magicPower;
+        Map<String, MagicPower> magicPowerMap = new HashMap<>();
+        for (Map.Entry<String, Attribute> entry : map.entrySet()) {
+            magicPower = (MagicPower) entry.getValue();
+            magicPowerMap.put(entry.getKey(), magicPower);
+        }
+        setMagicPowerMap(magicPowerMap);
+
     }
 
     private HashMap<String, Attribute> fetchAttributes(String gameVersion, String attributeId) {

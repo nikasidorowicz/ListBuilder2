@@ -19,4 +19,8 @@ public class Model {
     private int will;
     private int fate;
 
+    public void setFight() {
+        setFight(String.format("%s/%s+", getFightSkill(), getShootSkill()));
+    }
+
 }
