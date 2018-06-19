@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="objects.Unit">
+    <top>
+        <VBox prefHeight="16.0" prefWidth="800.0" BorderPane.alignment="TOP_CENTER">
+            <TextField fx:id="nameHeader" alignment="TOP_LEFT" maxWidth="100" prefWidth="100">
+            </TextField>
+            <TextField fx:id="pointsHeader" alignment="TOP_RIGHT" maxWidth="203.0" prefHeight="25.0" prefWidth="196.0" translateX="600.0" translateY="-20.0">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></TextField>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tablicaFig" maxHeight="300.0" maxWidth="660.0" prefWidth="660.0" BorderPane.alignment="TOP_CENTER">
+            <columns>
+                <TableColumn id="" prefWidth="60.0" text="" />
+                <TableColumn id="move" prefWidth="60.0" text="Move" />
+                <TableColumn id="fight" prefWidth="60.0" text="Fight" />
+                <TableColumn id="strength" prefWidth="60.0" text="Strength" />
+                <TableColumn id="deffence" prefWidth="60.0" text="Deffence" />
+                <TableColumn id="attack" prefWidth="60.0" text="Attack" />
+                <TableColumn id="wound" prefWidth="60.0" text="Wound" />
+                <TableColumn id="courage" prefWidth="60.0" text="Courage" />
+                <TableColumn id="might" prefWidth="60.0" text="Might" />
+                <TableColumn id="will" prefWidth="60.0" text="Will" />
+                <TableColumn id="fate" prefWidth="60.0" text="Fate" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox prefHeight="240.0" prefWidth="800.0">
+            <TextField fx:id="wargear" alignment="TOP_RIGHT" maxWidth="100" prefWidth="100" translateX="30.0" translateY="50.0">
+            </TextField>
+            <TextField fx:id="specialRules" maxWidth="100" prefWidth="100" translateX="30.0" translateY="100.0">
+            </TextField>
+            <TextField fx:id="attributeName" maxHeight="400" maxWidth="400" prefHeight="400" translateX="380.0">
+            </TextField>
+            <CheckBox fx:id="option" translateX="30.0" translateY="-30.0">
+            </CheckBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
