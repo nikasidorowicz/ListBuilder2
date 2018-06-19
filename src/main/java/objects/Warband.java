@@ -1,6 +1,5 @@
 package objects;
 
-import jdk.nashorn.internal.runtime.ECMAException;
 import lombok.Data;
 
 import java.util.ArrayList;

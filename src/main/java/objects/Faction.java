@@ -12,6 +12,8 @@ import java.util.*;
 @Data
 public class Faction {
 
+    private String sideOfConflict;
+
     private String factionId;
     private String factionName;
 
@@ -38,6 +40,7 @@ public class Faction {
             FactionBase base = g.fromJson(jsonReader, Faction.FactionBase.class);
             if (!factionId.equals(base.getFactionId())) throw new Exception("Wrong faction ID!");
 
+            setSideOfConflict(base.getSideOfConflict());
             setFactionName(base.getFactionName());
             setFactionCommanders(base.getFactionCommanders());
             setFactionWarriors(base.getFactionWarriors());
@@ -53,6 +56,7 @@ public class Faction {
 
     @Data
     private class FactionBase {
+        private String sideOfConflict;
         private String factionId;
         private String factionName;
         private List<String> factionHeroes;

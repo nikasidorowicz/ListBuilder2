@@ -16,6 +16,9 @@ public class Components {
 
     private Gson gson;
 
+    private Map<String, String> sidesOfConflict;
+    private Map<String, Map<String, Faction>> factionMap;
+
     private Map<String, Wargear> wargearMap;
     private Map<String, SpecialRule> specialRuleMap;
     private Map<String, MagicPower> magicPowerMap;
@@ -30,6 +33,29 @@ public class Components {
         setGson(new GsonBuilder()
                 .registerTypeAdapterFactory(rta)
                 .create());
+
+        // TODO: remove harcoding
+        setSidesOfConflict(new HashMap<>());
+        getSidesOfConflict().put("good", "Forces of good");
+        getSidesOfConflict().put("evil", "Forces of evil");
+
+        String[] factionsArray = new String[]{"faction1"};
+        // TODO: remove hardcoding
+        Map<String, Map<String, Faction>> factionMap = new HashMap<>();
+        factionMap.put("good", new HashMap<>());
+        factionMap.put("evil", new HashMap<>());
+        Faction faction;
+        for (String factionId : factionsArray) {
+            try {
+                faction = new Faction(gameVersion, factionId);
+                if (getSidesOfConflict().containsKey(faction.getSideOfConflict()))
+                    factionMap.get(faction.getSideOfConflict()).put(faction.getFactionId(), faction);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        setFactionMap(factionMap);
+
 
         // TODO: refactor using https://stackoverflow.com/questions/8482761/returning-an-extended-class-where-super-class-is-expected
         // WARGEAR
