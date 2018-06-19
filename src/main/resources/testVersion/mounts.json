@@ -1,0 +1,18 @@
+[
+  {
+    "type": "Mount",
+    "id": "horse",
+    "name": "Horse",
+    "race": "Horse",
+    "model": {
+      "name": "Horse",
+      "move": 10,
+      "fightSkill": 3,
+      "strength": 3,
+      "defence": 4,
+      "attacks": 1,
+      "wounds": 1,
+      "courage": 3
+    }
+  }
+]

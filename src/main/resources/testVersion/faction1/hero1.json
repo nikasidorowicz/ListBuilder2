@@ -26,8 +26,8 @@
         "heavyarmour"
       ],
       "specialRules": [
-        "testFaction1SpecialRule1",
-        "heroSpecialRule1"
+        "testfaction1specialrule1",
+        "herospecialrule1"
       ]
     }
   ],

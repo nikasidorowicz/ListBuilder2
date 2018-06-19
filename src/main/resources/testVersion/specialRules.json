@@ -1,16 +1,20 @@
 [
   {
-    "name": "testFaction1SpecialRule1",
+    "type": "SpecialRule",
+    "id": "testfaction1specialrule1",
+    "name": "Test Faction 1 Special Rule 1",
     "rules": [
       "This is a special rule."
     ],
-    "type": "Passive"
+    "ruleType": "Passive"
   },
   {
-    "name": "heroSpecialRule1",
+    "type": "SpecialRule",
+    "id": "herospecialrule1",
+    "name": "Hero Special Rule 1",
     "rules": [
       "This is a SUPER special rule."
     ],
-    "type": "Passive"
+    "ruleType": "Passive"
   }
 ]

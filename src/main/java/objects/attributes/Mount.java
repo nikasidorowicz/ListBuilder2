@@ -2,11 +2,13 @@ package objects.attributes;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import objects.Model;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class SpecialRule extends Attribute{
+public class Mount extends Attribute {
 
-    private String ruleType;
+    private String race;
+    private Model model;
 
 }

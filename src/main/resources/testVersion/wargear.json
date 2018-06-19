@@ -1,5 +1,6 @@
 [
   {
+    "type": "Wargear",
     "id": "sword",
     "name": "Sword",
     "rules": [
@@ -7,6 +8,7 @@
     ]
   },
   {
+    "type": "Wargear",
     "id": "heavyarmour",
     "name": "Heavy armour",
     "rules": [
@@ -14,6 +16,7 @@
     ]
   },
   {
+    "type": "Wargear",
     "id": "armour",
     "name": "Armour",
     "rules": [
@@ -21,6 +24,7 @@
     ]
   },
   {
+    "type": "Wargear",
     "id": "shield",
     "name": "Shield",
     "rules": [
@@ -28,6 +32,7 @@
     ]
   },
   {
+    "type": "Wargear",
     "id": "bow",
     "name": "bow",
     "rules": [

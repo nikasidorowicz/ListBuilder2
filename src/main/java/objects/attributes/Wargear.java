@@ -7,7 +7,6 @@ import lombok.EqualsAndHashCode;
 @Data
 public class Wargear extends Attribute {
 
-    private String id;
     private int points;
     private boolean isMissile;
     private int strength;
