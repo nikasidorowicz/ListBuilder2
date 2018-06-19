@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="objects.Unit">
+    <top>
+        <VBox prefHeight="200.0" prefWidth="800" BorderPane.alignment="TOP_CENTER">
+            <TextField  maxWidth="100"  fx:id="nameHeader" prefWidth = "100" alignment="TOP_LEFT">
+            </TextField>
+            <TextField  maxWidth="100" fx:id="pointsHeader" prefWidth="100" alignment="TOP_RIGHT">
+            </TextField>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tablicaFig" prefHeight="660.0" maxWidth="660.0" BorderPane.alignment="TOP_CENTER">
+            <columns>
+                <TableColumn id="" prefWidth="60.0" text="" />
+                <TableColumn id="move" prefWidth="60.0" text="Move" />
+                <TableColumn id="fight" prefWidth="60.0" text="Fight" />
+                <TableColumn id="strength" prefWidth="60.0" text="Strength" />
+                <TableColumn id="deffence" prefWidth="60.0" text="Deffence" />
+                <TableColumn id="attack" prefWidth="60.0" text="Attack" />
+                <TableColumn id="wound" prefWidth="60.0" text="Wound" />
+                <TableColumn id="courage" prefWidth="60.0" text="Courage" />
+                <TableColumn id="might" prefWidth="60.0" text="Might" />
+                <TableColumn id="will" prefWidth="60.0" text="Will" />
+                <TableColumn id="fate" prefWidth="60.0" text="Fate" />
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>
