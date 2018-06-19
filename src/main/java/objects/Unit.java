@@ -2,10 +2,7 @@ package objects;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import lombok.Data;
@@ -25,6 +22,7 @@ public class Unit {
     private int unitCount;
 
     private List<Figure> figures;
+    @FXML
     private List<Wargear> options;
     private List<Wargear> bought;
 
@@ -82,6 +80,13 @@ public class Unit {
     @FXML
     private TextField pointsHeader;
     @FXML
+    private TextField wargear;
+    @FXML
+    private TextField specialRules;
+
+    @FXML
+    private CheckBox option;
+    @FXML
     private TableView<Figure> tablicaFig;
 
 
@@ -89,6 +94,8 @@ public class Unit {
         nameHeader.setText(this.getNameHeader());
         pointsHeader.setText(this.getPointsHeader());
         tablicaFig.setItems((ObservableList<Figure>) figures);
+        //wargear.setText(this.);
+
 
 
         for (TableColumn<Figure, ?> figureTableColumn : tablicaFig.getColumns()) {
