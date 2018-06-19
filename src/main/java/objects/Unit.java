@@ -6,8 +6,18 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import jdk.nashorn.internal.objects.annotations.Constructor;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import jdk.nashorn.internal.objects.annotations.Constructor;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import objects.Mount;
+import lombok.Getter;
+import lombok.Setter;
+import objects.attributes.Wargear;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -16,13 +26,15 @@ import java.util.List;
 import java.util.Map;
 
 // TODO: add copies support for cleaner Warband view.
-@Data
+@Data @Getter @Setter @AllArgsConstructor
 public class Unit {
 
     private String id;
     private String name;
     private int points;
     private int figuresCount;
+    protected List<Figure> figures;
+    private int unitCount;
     protected List<Figure> figures;
     private Map<String, Integer> options;
     private Map<String, Integer> bought;
@@ -91,9 +103,12 @@ public class Unit {
         throw new Exception("Wrong option name!");
     }
 
+
     public void clear() {
         setMount(null);
         setBought(new HashMap<>());
     }
 
 }
+
+
