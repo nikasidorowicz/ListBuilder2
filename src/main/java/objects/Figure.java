@@ -1,13 +1,15 @@
 package objects;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import objects.attributes.MagicPower;
 import objects.attributes.SpecialRule;
 import objects.attributes.Wargear;
 
 import java.util.List;
 
-@Data
+@Data @Getter @Setter
 public class Figure {
 
     private String name;

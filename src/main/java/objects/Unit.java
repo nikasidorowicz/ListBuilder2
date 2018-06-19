@@ -1,8 +1,15 @@
 package objects;
 
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.Data;
-import objects.attributes.Mount;
+import objects.Mount;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +23,7 @@ public class Unit {
     private String name;
     private int points;
     private int figuresCount;
-    private List<Figure> figures;
+    protected List<Figure> figures;
     private Map<String, Integer> options;
     private Map<String, Integer> bought;
     private Mount mount;

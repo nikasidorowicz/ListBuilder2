@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.Button?>
+<BorderPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="objects.UnitView">
+    <top>
+        <VBox prefHeight="16.0" prefWidth="800.0" BorderPane.alignment="TOP_CENTER">
+            <TextField fx:id="nameHeader" alignment="TOP_LEFT" maxWidth="100" prefWidth="100" onAction="#dzialaj">
+            </TextField>
+
+            <Button fx:id="baton" onAction="#dzialaj">
+            </Button>
+            <TextField fx:id="pointsHeader"  alignment="TOP_RIGHT" maxWidth="203.0" prefHeight="25.0" prefWidth="196.0" translateX="600.0" translateY="-20.0">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></TextField>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tablicaModeli" maxHeight="300.0" maxWidth="660.0" prefWidth="660.0" BorderPane.alignment="TOP_CENTER">
+            <columns>
+                <TableColumn id="name" prefWidth="60.0" text="" />
+                <TableColumn id="move" prefWidth="60.0" text="Move" />
+                <TableColumn id="fight" prefWidth="60.0" text="Fight" />
+                <TableColumn id="strength" prefWidth="60.0" text="Strength" />
+                <TableColumn id="defence" prefWidth="60.0" text="Defence" />
+                <TableColumn id="attacks" prefWidth="60.0" text="Attacks" />
+                <TableColumn id="wounds" prefWidth="60.0" text="Wounds" />
+                <TableColumn id="courage" prefWidth="60.0" text="Courage" />
+                <TableColumn id="might" prefWidth="60.0" text="Might" />
+                <TableColumn id="will" prefWidth="60.0" text="Will" />
+                <TableColumn id="fate" prefWidth="60.0" text="Fate" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+
+        <VBox fx:id="paczka" prefHeight="230.0" prefWidth="800.0" translateY="-100.0">
+            <TextField fx:id="specialRules" maxWidth="100" prefWidth="100" translateX="200.0" translateY="75.0">
+            </TextField>
+            <TextField fx:id="wargear" maxWidth="100" prefWidth="100" translateY="50.0">
+            </TextField>
+            <TextField fx:id="attributeName" maxHeight="400" maxWidth="400" minHeight="60.0" prefWidth="400.0" translateX="300.0" translateY="100.0">
+            </TextField>
+            <ComboBox fx:id="dajesz">
+            </ComboBox>
+            <TextField fx:id="w1" maxWidth="60" translateX="60.0" translateY="125.0">
+            </TextField>
+            <TextField fx:id="w2" maxWidth="60" translateY="100.0">
+            </TextField>
+            <TextField fx:id="w3" maxWidth="60" translateX="540.0" translateY="75.0">
+            </TextField>
+            <TextField fx:id="w4" maxWidth="60" translateX="120.0" translateY="50.0">
+            </TextField>
+            <TextField fx:id="w5" maxWidth="60" translateX="180.0" translateY="25.0">
+            </TextField>
+            <TextField fx:id="w6" maxWidth="60" translateX="480.0">
+            </TextField>
+            <TextField fx:id="w7" maxWidth="60" translateX="420.0" translateY="-25.0">
+            </TextField>
+            <TextField fx:id="w8" maxWidth="60" translateX="360.0" translateY="-50.0">
+            </TextField>
+            <TextField fx:id="w9" maxWidth="60" translateX="300.0" translateY="-75.0">
+            </TextField>
+            <TextField fx:id="w10" maxWidth="60" translateX="240.0" translateY="-100.0">
+            </TextField>
+
+        </VBox>
+
+            <!--<CheckBox fx:id="o1" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o2" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o3" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o4" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o5" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o6" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o7" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o8" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o9" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+            <!--<CheckBox fx:id="o10" translateX="30.0" translateY="-30.0">-->
+            <!--</CheckBox>-->
+
+    </bottom>
+
+
+</BorderPane>
