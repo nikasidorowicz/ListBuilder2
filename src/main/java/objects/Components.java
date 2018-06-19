@@ -19,6 +19,7 @@ public class Components {
     private Map<String, Wargear> wargearMap;
     private Map<String, SpecialRule> specialRuleMap;
     private Map<String, MagicPower> magicPowerMap;
+    private Map<String, Mount> mountMap;
 
     public Components(String gameVersion) {
         setWargearMap(fetchWargear(gameVersion));

@@ -5,5 +5,12 @@
       "This is a special rule."
     ],
     "type": "Passive"
+  },
+  {
+    "name": "heroSpecialRule1",
+    "rules": [
+      "This is a SUPER special rule."
+    ],
+    "type": "Passive"
   }
 ]

@@ -1,14 +1,14 @@
 {
   "id": "hero1",
-  "name": "hero1",
+  "name": "Hero 1",
   "points": 100,
   "figuresCount": 1,
   "figures": [
     {
-      "name": "hero1",
+      "name": "Hero 1",
       "race": "Human",
       "model": {
-        "name": "hero1",
+        "name": "Hero 1",
         "move": 6,
         "fightSkill": 5,
         "shootSkill": 4,
@@ -26,7 +26,8 @@
         "heavyarmour"
       ],
       "specialRules": [
-        "testFaction1SpecialRule1"
+        "testFaction1SpecialRule1",
+        "heroSpecialRule1"
       ]
     }
   ],

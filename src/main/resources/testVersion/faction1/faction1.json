@@ -1,0 +1,13 @@
+{
+  "factionId": "faction1",
+  "factionName": "Faction 1",
+  "factionHeroes": [
+    "hero1"
+  ],
+  "factionCommanders": [
+    "testcaptain1"
+  ],
+  "factionWarriors": [
+    "warrior1"
+  ]
+}

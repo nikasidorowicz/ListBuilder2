@@ -1,0 +1,34 @@
+{
+  "id": "warrior1",
+  "name": "Warrior 1",
+  "points": 6,
+  "figuresCount": 1,
+  "figures": [
+    {
+      "name": "Warrior 1",
+      "race": "Human",
+      "model": {
+        "name": "Warrior 1",
+        "move": 6,
+        "fightSkill": 3,
+        "shootSkill": 3,
+        "strength": 3,
+        "defence": 3,
+        "attacks": 1,
+        "wounds": 1,
+        "courage": 3
+      },
+      "wargears": [
+        "sword"
+      ],
+      "specialRules": [
+        "testFaction1SpecialRule1"
+      ]
+    }
+  ],
+  "options": {
+    "shield": 1,
+    "bow": 1,
+    "horse": 5
+  }
+}

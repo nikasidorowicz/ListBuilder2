@@ -19,16 +19,15 @@ public class TestUnit {
     public static void init() {
         String gameVersion = "testVersion";
         String factionId = "faction1";
-
         factory = new UnitFactory(gameVersion, factionId);
     }
 
     @Test
-    public void testUnitFactory() {
+    public void shouldGetUnitWithUnitFactory() {
         Unit hero = factory.getUnit("hero1");
 
         assertEquals("hero1", hero.getId());
-        assertEquals("hero1", hero.getName());
+        assertEquals("Hero 1", hero.getName());
         assertEquals(100, hero.getPoints());
         assertEquals(1, hero.getFiguresCount());
         assertTrue(hero.getOptions().containsKey("horse"));
@@ -43,9 +42,11 @@ public class TestUnit {
         assertEquals(2, heroFigure.getWargears().size());
         assertTrue(heroFigure.getWargears().contains("sword"));
         assertEquals(null, heroFigure.getMagicPowers());
+        assertEquals(2, heroFigure.getSpecialRules().size());
 
         Model model = heroFigure.getModel();
         assertEquals("5/4+", model.getFight());
+        assertEquals(3, model.getMight());
 
     }
 

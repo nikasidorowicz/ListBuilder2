@@ -1,14 +1,14 @@
 {
   "id": "testcaptain1",
-  "name": "testCaptain1",
+  "name": "Test Captain 1",
   "points": 50,
   "figuresCount": 1,
   "figures": [
     {
-      "name": "testCaptain1",
+      "name": "Test Captain 1",
       "race": "Human",
       "model": {
-        "name": "testCaptain1",
+        "name": "Test Captain 1",
         "move": 6,
         "fightSkill": 4,
         "shootSkill": 4,
