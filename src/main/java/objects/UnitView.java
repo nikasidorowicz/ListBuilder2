@@ -193,7 +193,6 @@ public class UnitView {
             }
         }
 
-
     }
 
     @FXML
@@ -203,5 +202,4 @@ public class UnitView {
         attributeName.setText(nameHeader.getText());
     }
 }
-
 
