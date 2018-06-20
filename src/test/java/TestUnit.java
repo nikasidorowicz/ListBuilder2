@@ -19,7 +19,6 @@ public class TestUnit {
     public static void init() {
         String gameVersion = "testVersion";
         String factionId = "faction1";
-
         factory = new UnitFactory(gameVersion, factionId);
     }
 

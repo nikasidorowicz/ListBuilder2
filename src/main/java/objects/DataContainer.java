@@ -6,12 +6,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class DataContainer {
-    @Getter @Setter protected ObservableList<Unit> unites;
-    //@Getter @Setter protected ObservableList <Model> models;
+    @Getter @Setter protected ObservableList<Unit> units;
+
 
     public DataContainer() {
-        unites = FXCollections.observableArrayList();
-        //models = FXCollections.observableArrayList();
+        units = FXCollections.observableArrayList();
     }
 
 

@@ -9,7 +9,7 @@ import objects.attributes.Wargear;
 
 import java.util.List;
 
-@Data
+@Data @Getter @Setter
 public class Figure {
 
     private String name;
