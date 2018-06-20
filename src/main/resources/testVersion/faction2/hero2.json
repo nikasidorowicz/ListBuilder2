@@ -1,0 +1,39 @@
+{
+  "id": "hero2",
+  "name": "Hero 2",
+  "points": 110,
+  "figuresCount": 1,
+  "figures": [
+    {
+      "name": "Hero 2",
+      "race": "Humanish",
+      "model": {
+        "name": "Hero 2",
+        "move": 6,
+        "fightSkill": 5,
+        "shootSkill": 4,
+        "strength": 4,
+        "defence": 6,
+        "attacks": 2,
+        "wounds": 2,
+        "courage": 5,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      "wargears": [
+        "sword",
+        "heavyarmour"
+      ],
+      "specialRules": [
+        "testfaction2specialrule2",
+        "herospecialrule1"
+      ]
+    }
+  ],
+  "options": {
+    "shield": 5,
+    "bow": 5,
+    "horse": 10
+  }
+}

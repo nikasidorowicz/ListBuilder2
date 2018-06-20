@@ -13,6 +13,7 @@ import java.util.*;
 public class Faction {
 
     private String sideOfConflict;
+    private List<String> allies;
 
     private String factionId;
     private String factionName;
@@ -41,6 +42,7 @@ public class Faction {
             if (!factionId.equals(base.getFactionId())) throw new Exception("Wrong faction ID!");
 
             setSideOfConflict(base.getSideOfConflict());
+            setAllies(base.getAllies());
             setFactionName(base.getFactionName());
             setFactionCommanders(base.getFactionCommanders());
             setFactionWarriors(base.getFactionWarriors());
@@ -54,9 +56,11 @@ public class Faction {
         }
     }
 
+    // TODO: this can surely be done more efficiently...
     @Data
     private class FactionBase {
         private String sideOfConflict;
+        private List<String> allies;
         private String factionId;
         private String factionName;
         private List<String> factionHeroes;

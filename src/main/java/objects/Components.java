@@ -39,7 +39,7 @@ public class Components {
         getSidesOfConflict().put("good", "Forces of good");
         getSidesOfConflict().put("evil", "Forces of evil");
 
-        String[] factionsArray = new String[]{"faction1"};
+        String[] factionsArray = new String[]{"faction1", "faction2"};
         // TODO: remove hardcoding
         Map<String, Map<String, Faction>> factionMap = new HashMap<>();
         factionMap.put("good", new HashMap<>());

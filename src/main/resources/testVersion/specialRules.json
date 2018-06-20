@@ -10,6 +10,15 @@
   },
   {
     "type": "SpecialRule",
+    "id": "testfaction2specialrule2",
+    "name": "Test Faction 2 Special Rule 2",
+    "rules": [
+      "This is a different special rule."
+    ],
+    "ruleType": "Passive"
+  },
+  {
+    "type": "SpecialRule",
     "id": "herospecialrule1",
     "name": "Hero Special Rule 1",
     "rules": [

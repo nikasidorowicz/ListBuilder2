@@ -18,7 +18,7 @@ public class TestComponents {
     public void shouldFetchAttributes() {
         assertEquals(5, components.getWargearMap().size());
         assertEquals(0, components.getMagicPowerMap().size());
-        assertEquals(2, components.getSpecialRuleMap().size());
+        assertEquals(3, components.getSpecialRuleMap().size());
         assertEquals(1, components.getMountMap().size());
     }
 

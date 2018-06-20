@@ -1,0 +1,37 @@
+{
+  "id": "testcaptain2",
+  "name": "Test Captain 2",
+  "points": 60,
+  "figuresCount": 1,
+  "figures": [
+    {
+      "name": "Test Captain 2",
+      "race": "Human",
+      "model": {
+        "name": "Test Captain 2",
+        "move": 6,
+        "fightSkill": 4,
+        "shootSkill": 4,
+        "strength": 4,
+        "defence": 6,
+        "attacks": 2,
+        "wounds": 2,
+        "courage": 4,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      "wargears": [
+        "sword",
+        "heavyarmour"
+      ],
+      "specialRules": [
+        "testfaction2specialrule2"
+      ]
+    }
+  ],
+  "options": {
+    "shield": 6,
+    "bow": 6
+  }
+}
