@@ -65,6 +65,7 @@ public class WarbandView implements HierarchicalController<MainController>{
     }
 
     public void add(ActionEvent actionEvent) throws Exception {
+        factionWarriors.getValue();
 
     }
 

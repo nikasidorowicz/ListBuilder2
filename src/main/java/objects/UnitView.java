@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.var;
 
 import java.awt.event.MouseEvent;
@@ -19,9 +21,10 @@ import java.text.ParseException;
 public class UnitView {
 
 
-    public static UnitFactory factory;
-    String gameVersion = "testVersion";
-    String factionId = "faction1";
+//    public static UnitFactory factory;
+//    String gameVersion = "testVersion";
+//    String factionId = "faction1";
+    @Getter @Setter private Unit unit;
 
 
     @FXML private TextField nameHeader;
@@ -74,8 +77,8 @@ public class UnitView {
 
     public void initialize() throws ParseException {
 
-        factory = new UnitFactory(gameVersion, factionId);
-        Unit unit = factory.getUnit("hero1");
+//        factory = new UnitFactory(gameVersion, factionId);
+//        Unit unit = factory.getUnit("hero1");
 
         nameHeader.setText(unit.getNameHeader());
         pointsHeader.setText(unit.getPointsHeader());

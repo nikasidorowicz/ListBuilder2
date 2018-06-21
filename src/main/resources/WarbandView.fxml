@@ -19,7 +19,7 @@
             </ComboBox>
             <ComboBox fx:id="number" maxWidth="80" promptText="Number" translateX="160" translateY="30">
             </ComboBox>
-            <Button fx:id="add" minWidth="40" onAction="#add" text="Add" translateX="240" translateY="30">
+            <Button fx:id="add" minWidth="40" onAction="#add" text="Add" translateX="240" translateY="30" >
             </Button>
             <TextField fx:id="sumPoints" maxWidth="40" promptText="Points" translateX="550">
             </TextField>
@@ -27,8 +27,8 @@
             </TextField>
         </AnchorPane>
         <Button fx:id="proba" onAction="#loadU" />
-        <ScrollPane>
-            <Pane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+        <ScrollPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <Pane fx:id="pane" minHeight="200" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             </Pane>
         </ScrollPane>
     </items>
