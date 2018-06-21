@@ -1,6 +1,7 @@
 package objects;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -11,10 +12,12 @@ import java.io.IOException;
 
 public class MainController implements HierarchicalController<MainController> {
 
+    public Button addUnit;
+
     @Getter
     protected DataContainer dataContainer;
 
-    public AnchorPane pane;
+    public Pane pane;
 
     @Override
     public MainController getParentController() {
@@ -50,9 +53,8 @@ public class MainController implements HierarchicalController<MainController> {
         return dataContainer;
     }
 
-
     public void loadUnit(ActionEvent actionEvent) {
-
+        System.out.println("Czesc");
         loadIntoPane("UnitView.fxml");
     }
 }

@@ -8,14 +8,12 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <?import javafx.scene.control.Button?>
 <BorderPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="objects.UnitView">
     <top>
         <VBox prefHeight="16.0" prefWidth="800.0" BorderPane.alignment="TOP_CENTER">
             <TextField fx:id="nameHeader" alignment="TOP_LEFT" maxWidth="100" prefWidth="100" onAction="#dzialaj">
             </TextField>
-
             <Button fx:id="baton" onAction="#dzialaj">
             </Button>
             <TextField fx:id="pointsHeader"  alignment="TOP_RIGHT" maxWidth="203.0" prefHeight="25.0" prefWidth="196.0" translateX="600.0" translateY="-20.0">
