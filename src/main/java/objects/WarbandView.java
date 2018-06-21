@@ -3,15 +3,18 @@ package objects;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import lombok.Getter;
 
-import javax.swing.*;
+import java.io.IOException;
 
 
-public class WarbandView implements HierarchicalController<MainController>{
+public class WarbandView implements HierarchicalController<WarbandView>{
 
     public ComboBox <String> factionCommanders;
     public ComboBox  <String> factionWarriors;
@@ -21,7 +24,7 @@ public class WarbandView implements HierarchicalController<MainController>{
     public Button add;
     public Button addChange;
     public AnchorPane pane;
-    private MainController parentController;
+    //private MainController parentController;
 
 
 //
@@ -37,6 +40,51 @@ public class WarbandView implements HierarchicalController<MainController>{
 //    }
 //
 //    Warband warband =  new Warband(faction);
+    @Getter
+    protected DataContainer dataContainer;
+
+
+    @Override
+    public WarbandView getParentController() {
+        return this;
+    }
+
+    @Override
+    public void setParentController(WarbandView parent) {
+
+    }
+
+    private void loadIntoPane(String fxml) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+        try {
+            final BorderPane load = loader.load();
+            pane.getChildren().clear();
+            pane.getChildren().add(load);
+            HierarchicalController<WarbandView> daneController = loader.getController();
+            daneController.setParentController(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+    public WarbandView() throws Exception {
+        dataContainer = new DataContainer();
+    }
+
+    public DataContainer getDataContainer() {
+        return dataContainer;
+    }
+
+
+    public void loadUnit(ActionEvent actionEvent) {
+        loadIntoPane("UnitView.fxml");
+    }
+
+
+
 
 
     String factionId = "faction1";
@@ -45,8 +93,7 @@ public class WarbandView implements HierarchicalController<MainController>{
     private Faction faction = new Faction(gameVersion, factionId);
     Warband warband = new Warband(faction);
 
-    public WarbandView() throws Exception {
-    }
+
 
     public void initialize () throws Exception {
 
@@ -71,7 +118,7 @@ public class WarbandView implements HierarchicalController<MainController>{
 
         warband.chooseCommander(factionCommanders.getValue());
         addChange.setText("Change");
-        parentController.loadUnit(actionEvent);
+        loadUnit(actionEvent);
     }
 
     public void add(ActionEvent actionEvent) throws Exception {
@@ -83,18 +130,6 @@ public class WarbandView implements HierarchicalController<MainController>{
         System.out.println(output);
     }
 
-
-
-    @Override
-    public MainController getParentController() {
-        return parentController;
-    }
-
-    @Override
-    public void setParentController(MainController parentController) {
-        this.parentController = parentController;
-
-    }
 
 
 }

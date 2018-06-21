@@ -19,6 +19,7 @@ import java.text.ParseException;
 public class UnitView {
 
 
+
     public static UnitFactory factory;
     String gameVersion = "testVersion";
     String factionId = "faction1";
