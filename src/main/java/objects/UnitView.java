@@ -24,10 +24,8 @@ public class UnitView {
     String factionId = "faction1";
 
 
-    @FXML
-    private TextField nameHeader;
-    @FXML
-    private TextField pointsHeader;
+    @FXML private TextField nameHeader;
+    @FXML private TextField pointsHeader;
 //    @FXML private CheckBox o1;
 //    @FXML private CheckBox o2;
 //    @FXML private CheckBox o3;
@@ -40,28 +38,17 @@ public class UnitView {
 //    @FXML private CheckBox o10;
 
     // ObservableList<CheckBox> checkboxes;
-    @FXML
-    private TextField wargear;
-    @FXML
-    private TextField w1;
-    @FXML
-    private TextField w2;
-    @FXML
-    private TextField w3;
-    @FXML
-    private TextField w4;
-    @FXML
-    private TextField w5;
-    @FXML
-    private TextField w6;
-    @FXML
-    private TextField w7;
-    @FXML
-    private TextField w8;
-    @FXML
-    private TextField w9;
-    @FXML
-    private TextField w10;
+    @FXML private TextField wargear;
+    @FXML private TextField w1;
+    @FXML private TextField w2;
+    @FXML private TextField w3;
+    @FXML private TextField w4;
+    @FXML private TextField w5;
+    @FXML private TextField w6;
+    @FXML private TextField w7;
+    @FXML private TextField w8;
+    @FXML private TextField w9;
+    @FXML private TextField w10;
 
 //
 //    @FXML private TextField specialRules;
@@ -77,19 +64,12 @@ public class UnitView {
 //    @FXML private TextField sr10;
 
 
-    @FXML
-    private ChoiceBox<String> hm;
-    @FXML
-    private ComboBox<String> dajesz;
-    @FXML
-    private TextField attributeName;
-    @FXML
-    private Button baton;
+    @FXML private ChoiceBox<String> hm;
+    @FXML private ComboBox<String> dajesz;
+    @FXML private TextField attributeName;
+    @FXML private Button baton;
 
-
-    private Pane pane;
-    @FXML
-    private TableView<Model> tablicaModeli;
+    @FXML private TableView<Model> tablicaModeli;
 
 
     public void initialize() throws ParseException {

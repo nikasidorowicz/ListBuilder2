@@ -1,10 +1,12 @@
 package objects;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import lombok.Getter;
 
+import javafx.event.ActionEvent;
 import java.io.IOException;
 
 public class MainController implements HierarchicalController<MainController> {
@@ -12,7 +14,7 @@ public class MainController implements HierarchicalController<MainController> {
     @Getter
     protected DataContainer dataContainer;
 
-    public Pane pane;
+    public AnchorPane pane;
 
     @Override
     public MainController getParentController() {
@@ -23,7 +25,6 @@ public class MainController implements HierarchicalController<MainController> {
     public void setParentController(MainController parent) {
 
     }
-
 
     private void loadIntoPane(String fxml) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
@@ -36,13 +37,22 @@ public class MainController implements HierarchicalController<MainController> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
+
 
 
     public MainController() {
         dataContainer = new DataContainer();
     }
 
+    public DataContainer getDataContainer() {
+        return dataContainer;
+    }
 
+
+    public void loadUnit(ActionEvent actionEvent) {
+
+        loadIntoPane("UnitView.fxml");
+    }
 }

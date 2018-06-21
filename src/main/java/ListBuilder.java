@@ -26,7 +26,7 @@ public class ListBuilder extends Application {
 //        factory = new UnitFactory(gameVersion, factionId);
 //        Unit hero = factory.getUnit("hero1");
 
-        Parent root = FXMLLoader.load(getClass().getResource("UnitView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("WarbandView.fxml"));
         primaryStage.setTitle("ListBuilder");
         primaryStage.setScene(new Scene(root, 3000, 2750));
         primaryStage.show();

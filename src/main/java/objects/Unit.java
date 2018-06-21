@@ -1,35 +1,11 @@
 package objects;
 
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
-import jdk.nashorn.internal.objects.annotations.Constructor;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
-import jdk.nashorn.internal.objects.annotations.Constructor;
-import lombok.AllArgsConstructor;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
-import jdk.nashorn.internal.objects.annotations.Constructor;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import objects.Mount;
 import lombok.Getter;
 import lombok.Setter;
-import objects.attributes.Wargear;
-import lombok.Getter;
-import lombok.Setter;
-import objects.attributes.Wargear;
-
-import java.text.ParseException;
+import objects.attributes.Mount;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -43,7 +19,6 @@ public class Unit {
     private String name;
     private int points;
     private int figuresCount;
-    protected List<Figure> figures;
     private int unitCount;
     protected List<Figure> figures;
     private Map<String, Integer> options;
