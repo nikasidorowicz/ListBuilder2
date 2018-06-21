@@ -13,8 +13,18 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.AllArgsConstructor;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import jdk.nashorn.internal.objects.annotations.Constructor;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import objects.Mount;
+import lombok.Getter;
+import lombok.Setter;
+import objects.attributes.Wargear;
 import lombok.Getter;
 import lombok.Setter;
 import objects.attributes.Wargear;
@@ -103,12 +113,9 @@ public class Unit {
         throw new Exception("Wrong option name!");
     }
 
-
     public void clear() {
         setMount(null);
         setBought(new HashMap<>());
     }
 
 }
-
-
