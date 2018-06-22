@@ -6,17 +6,39 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import lombok.Getter;
 import lombok.var;
 
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.text.ParseException;
 
 
 
-public class UnitView {
+public class UnitView implements HierarchicalController<MainController> {
+    private MainController parentController;
+
+    public MainController getParentController() {
+        return parentController;
+    }
+
+    @Override
+    public void setParentController(MainController parentController) {
+        this.parentController = parentController;
+        //table.getItems().addAll(parentController.getDataContainer().getCzlowieczeks());
+    }
+
+    @Getter
+    protected DataContainer dataContainer;
+
+    public DataContainer getDataContainer() {
+        return dataContainer;
+    }
 
 
 

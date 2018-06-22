@@ -1,87 +1,20 @@
 package objects;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import lombok.Getter;
+
+import javafx.event.ActionEvent;
 import java.io.IOException;
-import java.util.List;
 
+public class MainController implements HierarchicalController<MainController> {
 
-
-public class MainController implements HierarchicalController<MainController>  {
-
-
-    public Pane srodek;
-    public TextField login;
-    public TextField rola;
+    @Getter
     protected DataContainer dataContainer;
-    public List<Integer> lista_statystyk;
-
-
-
-    public String getSredniWiek(){
-        return Integer.toString(lista_statystyk.get(0));
-    }
-    public String getSredniWzrost(){
-        return Integer.toString(lista_statystyk.get(1));
-    }
-    public String getLiczba(){
-        return Integer.toString(lista_statystyk.get(2));
-    }
-
-    public DataContainer getDataContainer() {
-        return dataContainer;
-    }
-
-    public MainController() {
-        dataContainer =  new DataContainer();
-    }
-
-    private void loadIntoPane(String fxml) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
-        try {
-            final Pane load = loader.load();
-            srodek.getChildren().clear();
-            srodek.getChildren().add(load);
-            HierarchicalController<MainController> daneController = loader.getController();
-            daneController.setParentController(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public void ToLogowanie(ActionEvent actionEvent) {
-        if (login.getText().isEmpty()) {
-            loadIntoPane("UnitView.fxml");
-        } else {
-            loadIntoPane("UnitView.fxml");
-        }
-    }
-
-
-
-    public void ToDane(ActionEvent actionEvent) {
-        if (rola.getText().equals("Administrator")){
-            loadIntoPane("okienko_dane2.fxml");
-        }
-        else {
-            loadIntoPane("okienko_dane.fxml");
-        }
-    }
-
-    
-
-    public void ToStatystyki(ActionEvent actionEvent) {
-        loadIntoPane("okienko_statystyka.fxml");
-    }
-
-    public void ToWylog(ActionEvent actionEvent) {
-        loadIntoPane("okienko_wylogowanie.fxml");
-    }
-
-
+    public Pane pane;
 
     @Override
     public MainController getParentController() {
@@ -90,6 +23,42 @@ public class MainController implements HierarchicalController<MainController>  {
 
     @Override
     public void setParentController(MainController parent) {
-
     }
+
+    private void loadIntoPane(String fxml) {
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource(fxml));
+        try {
+            final BorderPane load = loader.load();
+            pane.getChildren().clear();
+            pane.getChildren().add(load);
+            HierarchicalController<MainController> daneController = loader.getController();
+            daneController.setParentController(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+//        BorderPane newLoadedPane = FXMLLoader.load(getClass().getClassLoader().getResource("UnitView.fxml"));
+//        pane.getChildren().add(newLoadedPane);
+    }
+
+
+    public MainController() {
+        dataContainer = new DataContainer();
+    }
+
+    public DataContainer getDataContainer() {
+        return dataContainer;
+    }
+
+    public void loadUnitView(ActionEvent actionEvent) {
+        System.out.println("Czesc");
+        loadIntoPane("UnitView.fxml");
+    }
+
+    public void loadWarbandView(ActionEvent actionEvent) {
+        System.out.println("Czolem");
+        loadIntoPane("WarbandView.fxml");
+    }
+
+
 }
+
