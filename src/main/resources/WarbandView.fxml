@@ -2,35 +2,36 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.BorderPane?>
+
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="objects.WarbandView">
     <center>
-    <SplitPane >
+    <SplitPane dividerPositions="0.25125628140703515" orientation="VERTICAL">
         <items>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                <ComboBox fx:id="factionCommanders" promptText="Faction Commanders" onAction="#chooseCommander">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="106.0" prefWidth="598.0">
+                <ComboBox fx:id="factionCommanders" onAction="#chooseCommander" promptText="Faction Commanders">
                 </ComboBox>
-                <Button fx:id="addChange" text="Add/Change" minWidth="120" maxWidth="120" translateX="160" onAction="#addChange" >
+                <Button fx:id="addChange" maxWidth="120" minWidth="120" onAction="#addChange" text="Add/Change" translateX="160">
                 </Button>
-                <ComboBox fx:id="factionWarriors" translateY="30" promptText="Faction Warriors">
+                <ComboBox fx:id="factionWarriors" promptText="Faction Warriors" translateY="30">
                 </ComboBox>
-                <ComboBox fx:id="number" maxWidth="80" translateX="160" translateY="30" promptText="Number">
+                <ComboBox fx:id="number" maxWidth="80" promptText="Number" translateX="160" translateY="30">
                 </ComboBox>
-                <Button fx:id="add" minWidth="40" translateX="240" translateY="30" onAction="#add" text="Add">
+                <Button fx:id="add" minWidth="40" onAction="#add" text="Add" translateX="240" translateY="30">
                 </Button>
-                <TextField fx:id="sumPoints" maxWidth="40" translateX="550" promptText="Points">
+                <TextField fx:id="sumPoints" maxWidth="40" promptText="Points" translateX="550">
                 </TextField>
-                <TextField fx:id="sumModels" maxWidth="40" translateY="30" translateX="550" promptText="Models" >
+                <TextField fx:id="sumModels" maxWidth="40" promptText="Models" translateX="550" translateY="30">
                 </TextField>
             </AnchorPane>
-            <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                <ScrollPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <ScrollPane layoutX="-8.0" layoutY="-68.0" prefWidth="600.0">
+                    <BorderPane fx:id="pane" prefHeight="361.0" prefWidth="596.0">
+                    </BorderPane>
                 </ScrollPane>
             </AnchorPane>
         </items>

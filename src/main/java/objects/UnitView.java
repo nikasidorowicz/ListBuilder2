@@ -12,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.var;
 
 import java.awt.event.MouseEvent;
@@ -20,15 +21,15 @@ import java.text.ParseException;
 
 
 
-public class UnitView implements HierarchicalController<MainController> {
-    private MainController parentController;
+public class UnitView implements HierarchicalController<WarbandView> {
+    private WarbandView parentController;
 
-    public MainController getParentController() {
+    public WarbandView getParentController() {
         return parentController;
     }
 
     @Override
-    public void setParentController(MainController parentController) {
+    public void setParentController(WarbandView parentController) {
         this.parentController = parentController;
         //table.getItems().addAll(parentController.getDataContainer().getCzlowieczeks());
     }
@@ -43,8 +44,13 @@ public class UnitView implements HierarchicalController<MainController> {
 
 
     public static UnitFactory factory;
-    String gameVersion = "testVersion";
-    String factionId = "faction1";
+//    String gameVersion = "testVersion";
+//    String factionId = "faction1";
+
+    @Getter @Setter
+    String gameVersion;
+    @Getter @Setter
+    String factionId;
 
 
     @FXML private TextField nameHeader;
@@ -96,6 +102,9 @@ public class UnitView implements HierarchicalController<MainController> {
 
 
     public void initialize() throws ParseException {
+
+        this.setGameVersion(parentController.gameVersion);
+        this.setFactionId(parentController.factionId);
 
         factory = new UnitFactory(gameVersion, factionId);
         Unit unit = factory.getUnit("hero1");

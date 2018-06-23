@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import lombok.Getter;
+import org.junit.jupiter.api.BeforeAll;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -24,25 +25,19 @@ public class WarbandView implements HierarchicalController<MainController>{
     public TextField sumModels;
     public Button add;
     public Button addChange;
-    public AnchorPane pane;
+    public BorderPane pane;
     private MainController parentController;
 
 
+    public String gameVersion = "testVersion";
+    public String factionId = "faction1";
 
+    Faction faction = new Faction(gameVersion, factionId);
+    Warband warband = new Warband(faction);
 
-    //
-//    @BeforeAll
-//    public void initFaction() {
-//        String gameVersion = "testVersion";
-//        String factionId = "faction1";
-//        try {
-//            faction = new Faction(gameVersion, factionId);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    Warband warband =  new Warband(faction);
+    public WarbandView() throws Exception {
+    }
+
     public MainController getParentController() {
     return parentController;
 }
@@ -56,52 +51,23 @@ public class WarbandView implements HierarchicalController<MainController>{
     @Getter
     protected DataContainer dataContainer;
 
-//    private void loadIntoPane(String fxml) {
-//        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource(fxml));
-//        try {
-//            final BorderPane load = loader.load();
-//            pane.getChildren().clear();
-//            pane.getChildren().add(load);
-//            HierarchicalController<WarbandView> daneController = loader.getController();
-//            daneController.setParentController(this);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-
     public DataContainer getDataContainer() {
         return dataContainer;
     }
 
-    public void loadUnit(ActionEvent actionEvent) {
-        //loadIntoPane("UnitView.fxml");
+    public void loadUnit(ActionEvent actionEvent) throws IOException {
+        BorderPane newLoadedPane = FXMLLoader.load(getClass().getClassLoader().getResource("UnitView.fxml"));
+        pane.getChildren().add(newLoadedPane);
+        //parentController.loadUnitView(actionEvent);
+
     }
 
 
-//    String factionId = "faction1";
-//    String gameVersion = "testVersion";
-    //private Faction faction = new Faction(gameVersion, factionId);
-    //Warband warband = new Warband(new Faction(gameVersion, factionId));
-
-//    new Faction faction = new Faction(gameVersion, factionId);
-//    Warband warband = new Warband(faction);
-
-
     public void initialize () throws ParseException {
-
-
-        String factionId = "faction1";
-        String gameVersion = "testVersion";
-        //Faction faction = new Faction(gameVersion, factionId);
-        //Warband warband = new Warband(faction);
-
-//        ObservableList<String> commanders;
-//        commanders = FXCollections.observableArrayList();
-
-
-        //factionCommanders.getItems().addAll(warband.getFaction().getAvailableCommanders());
-        //factionWarriors.getItems().addAll(warband.getFaction().getFactionWarriors());
+        ObservableList<String> commanders;
+        commanders = FXCollections.observableArrayList();
+        factionCommanders.getItems().addAll(warband.getFaction().getAvailableCommanders());
+        factionWarriors.getItems().addAll(warband.getFaction().getFactionWarriors());
 
 
         ObservableList<Integer> options = FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10,11,12);
@@ -110,13 +76,11 @@ public class WarbandView implements HierarchicalController<MainController>{
     }
 
     public void addChange(ActionEvent actionEvent) throws Exception {
-        String factionId = "faction1";
-        String gameVersion = "testVersion";
-        Faction faction = new Faction(gameVersion, factionId);
-        Warband warband = new Warband(faction);
-        //warband.chooseCommander(factionCommanders.getValue());
+        warband.chooseCommander(factionCommanders.getValue());
         addChange.setText("Change");
         loadUnit(actionEvent);
+
+
     }
 
     public void add(ActionEvent actionEvent) throws Exception {
