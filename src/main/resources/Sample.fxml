@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="objects.MainController">
+    <center>
+        <Pane fx:id="pane" BorderPane.alignment="CENTER" />
+    </center>
+    <top>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="loadUnit" mnemonicParsing="false" onAction="#loadUnitView" text="UnitView" />
+                <Button fx:id="loadWarband" mnemonicParsing="false" onAction="#loadWarbandView" text="WarbandView" />
+            </children>
+        </HBox>
+    </top>
+</BorderPane>
