@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import lombok.Getter;
+import lombok.Setter;
 import org.junit.jupiter.api.BeforeAll;
 
 import java.io.IOException;
@@ -28,9 +29,14 @@ public class WarbandView implements HierarchicalController<MainController>{
     public BorderPane pane;
     private MainController parentController;
 
+    @Getter @Setter
+    private Unit unit;
+
 
     public String gameVersion = "testVersion";
     public String factionId = "faction1";
+
+
 
     Faction faction = new Faction(gameVersion, factionId);
     Warband warband = new Warband(faction);
@@ -77,13 +83,15 @@ public class WarbandView implements HierarchicalController<MainController>{
 
     public void addChange(ActionEvent actionEvent) throws Exception {
         warband.chooseCommander(factionCommanders.getValue());
+        System.out.println("Oto: " + warband.getCommander());
+        unit = warband.getCommander();
+        //this.setUnit(warband.getCommander());
         addChange.setText("Change");
         loadUnit(actionEvent);
-
-
     }
 
     public void add(ActionEvent actionEvent) throws Exception {
+        //this.setUnit(warband.getWarriors());
 
     }
 

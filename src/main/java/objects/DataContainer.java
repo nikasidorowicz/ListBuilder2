@@ -8,10 +8,10 @@ import lombok.Setter;
 public class DataContainer {
     @Getter @Setter protected ObservableList<Unit> units;
 
-
     public DataContainer() {
         units = FXCollections.observableArrayList();
     }
+
 
 
 

@@ -20,7 +20,6 @@ import java.io.IOException;
 import java.text.ParseException;
 
 
-
 public class UnitView implements HierarchicalController<WarbandView> {
     private WarbandView parentController;
 
@@ -31,14 +30,7 @@ public class UnitView implements HierarchicalController<WarbandView> {
     @Override
     public void setParentController(WarbandView parentController) {
         this.parentController = parentController;
-        //table.getItems().addAll(parentController.getDataContainer().getCzlowieczeks());
-    }
 
-    @Getter
-    protected DataContainer dataContainer;
-
-    public DataContainer getDataContainer() {
-        return dataContainer;
     }
 
 
@@ -92,7 +84,6 @@ public class UnitView implements HierarchicalController<WarbandView> {
 //    @FXML private TextField sr9;
 //    @FXML private TextField sr10;
 
-
     @FXML private ChoiceBox<String> hm;
     @FXML private ComboBox<String> dajesz;
     @FXML private TextField attributeName;
@@ -102,12 +93,18 @@ public class UnitView implements HierarchicalController<WarbandView> {
 
 
     public void initialize() throws ParseException {
-
-        this.setGameVersion(parentController.gameVersion);
-        this.setFactionId(parentController.factionId);
-
+//        System.out.println("Oto unit: " + parentController.getUnit());
+//
+       // unit = parentController.getUnit();
+        //System.out.println("To jest unit z Warbanda" + unit);
+        gameVersion = "testVersion";
+        factionId = "faction1";
         factory = new UnitFactory(gameVersion, factionId);
-        Unit unit = factory.getUnit("hero1");
+        //Unit unit = parentController.getUnit();
+
+        //Unit unit = factory.getUnit("hero1");
+        System.out.println("Patrz "+ parentController.getUnit());
+        Unit unit = factory.getUnit(parentController.getUnit().getName());
 
         nameHeader.setText(unit.getNameHeader());
         pointsHeader.setText(unit.getPointsHeader());
