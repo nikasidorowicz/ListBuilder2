@@ -109,16 +109,18 @@ public class ListBuilderController implements HierarchicalController {
 
     @FXML
     private void addWarband(ActionEvent actionEvent) throws IOException {
-        String sideOfConflict = getSideOfConflict().getValue();
-        Faction faction = getComponents().getFactionMap().get(sideOfConflict).get(getAvailableAllies().getValue());
-        getArmyList().addWarband(faction);
+        if (!(getSideOfConflict().getValue() == null || getAvailableAllies().getValue() == null)) {
+            String sideOfConflict = getSideOfConflict().getValue();
+            Faction faction = getComponents().getFactionMap().get(sideOfConflict).get(getAvailableAllies().getValue());
+            getArmyList().addWarband(faction);
 
-        // Add warband tab
-        // TODO: fit tab to enclosing pane...
-        Tab warbandTab = FXMLLoader.load(getClass().getResource("../Warband.fxml"));
-        String warbandName = String.format("Warband %s", getArmyList().getWarbands().size());
-        warbandTab.setText(warbandName);
-        getWarbandsPane().getTabs().add(warbandTab);
+            // Add warband tab
+            // TODO: fit tab to enclosing pane...
+            Tab warbandTab = FXMLLoader.load(getClass().getResource("../Warband.fxml"));
+            String warbandName = String.format("Warband %s", getArmyList().getWarbands().size());
+            warbandTab.setText(warbandName);
+            getWarbandsPane().getTabs().add(warbandTab);
+        }
     }
 
     @Override

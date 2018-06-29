@@ -33,10 +33,7 @@
       </VBox>
    </top>
    <center>
-      <TabPane fx:id="warbandsPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-        <tabs>
-          <Tab text="Warband 0" />
-        </tabs>
+      <TabPane fx:id="warbandsPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
       </TabPane>
    </center>
 </BorderPane>
